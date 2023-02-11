@@ -50,5 +50,5 @@ export interface IResponse {
   /**
    *  The info of the response.
    */
-  info: {};
+  info: object;
 }
