@@ -1,30 +1,26 @@
 import { FC } from "react";
 
+/**
+ * React functional component that renders a user card with name, email, and picture.
+ * @component
+ * @param {object} props - The props object containing the name, email, and picture props.
+ * @param {string} props.name - The name of the user to be rendered.
+ * @param {string} props.email - The email of the user to be rendered.
+ * @param {string} props.picture - The URL of the picture of the user to be rendered.
+ * @returns {JSX.Element} - User card with name, email, and picture.
+ */
+
 interface UserCardProps {
-  /**
-   * The full name of the user.
-   */
   name: string;
-  /**
-   * The email of the user.
-   */
   email: string;
-  /**
-   * The URL of the user's thumbnail picture.
-   */
   picture: string;
 }
-/**
- * A component that displays a user's information in a card format.
- */
+
 const UserCard: FC<UserCardProps> = ({
   email,
   picture,
   name,
 }: UserCardProps): JSX.Element => {
-  /**
-   * Render the user's information in a card format.
-   */
   return (
     <div className="card">
       <img src={picture} alt={name} />

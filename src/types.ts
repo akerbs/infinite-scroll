@@ -1,54 +1,54 @@
+/**
+ * Interface representing a user's name.
+ * @interface
+ * @property {string} first - The user's first name.
+ * @property {string} last - The user's last name.
+ */
 export interface IName {
-  /**
-   * The first name of the user.
-   */
   first: string;
-  /**
-   * The last name of the user.
-   */
   last: string;
 }
 
+/**
+ * Interface representing a user's profile picture.
+ * @interface
+ * @property {string} thumbnail - The URL for the user's profile picture thumbnail.
+ */
 export interface IPicture {
-  /**
-   * The thumbnail picture of the user.
-   */
   thumbnail: string;
 }
 
+/**
+ * Interface representing a user's ID.
+ * @interface
+ * @property {string} value - The value of the user's ID.
+ */
 export interface IID {
-  /**
-   *  The id of the user.
-   */
   value: string;
 }
 
+/**
+ * Interface representing a user.
+ * @interface
+ * @property {IID} id - The user's ID.
+ * @property {IName} name - The user's name.
+ * @property {string} email - The user's email address.
+ * @property {IPicture} picture - The user's profile picture.
+ */
 export interface IUser {
-  /**
-   *  The id of the user.
-   */
   id: IID;
-  /**
-   *  The name of the user.
-   */
   name: IName;
-  /**
-   *  The email of the user.
-   */
   email: string;
-  /**
-   *  The picture of the user.
-   */
   picture: IPicture;
 }
 
+/**
+ * Interface representing a response from the API.
+ * @interface
+ * @property {IUser[]} results - An array of user objects.
+ * @property {object} info - Additional information about the response.
+ */
 export interface IResponse {
-  /**
-   *  The results of the response.
-   */
   results: IUser[];
-  /**
-   *  The info of the response.
-   */
   info: object;
 }
